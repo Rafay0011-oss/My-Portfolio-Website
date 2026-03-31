@@ -13,32 +13,51 @@
 
 .project-cards {
   display: flex;
-
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 10px;
+  flex-wrap: nowrap;
 }
 
 .card {
-  margin-right: 20px;
-  width: 250px;
-  height: 250px;
-  border-radius: 20px;
-  padding: 30px;
-  color: white;
-  box-shadow: 8px 9px 20px 4px #e7e7e7;
+  scroll-snap-align: start;
+  flex: 0 1 auto;
+  scroll-behavior: smooth;
 }
 
-.card .project-title {
-  font-size: 25px;
-  font-weight: 800;
+.project-cards::-webkit-scrollbar {
+  display: none;
 }
 
-.project-card-1 {
-  background-color: var(--secondary-color-green);
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
 }
 
-.project-card-2 {
-  background-color: var(--secondary-color-yellow);    
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.project-card-3 {
-  background-color: var(--secondary-color-red);
+.dot.active {
+  background-color: #103643;
+  transform: scale(1.1);
+}
+
+.dot:hover {
+  background-color: #999999;
+}
+
+.dot.active:hover {
+  background-color: #103643;
 }

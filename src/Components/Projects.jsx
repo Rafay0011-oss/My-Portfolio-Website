@@ -1,84 +1,130 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
 import "./Projects.css"
+import Gymlaptopimg from "../assets/project-images/Gymlaptopimg.png"
+import GymPhoneimg from "../assets/project-images/GymPhoneimg.png"
+import GamingCommunityHome from "../assets/project-images/GamingCommunityHome.png"
+import GamingCommunityAbout from "../assets/project-images/GamingCommunityAbout.png"
+import GamingCommunityFeedback from "../assets/project-images/GamingCommunityFeedback.png"
+import AWS1 from "../assets/project-images/Artboard1.png"
+import AWS2 from "../assets/project-images/Artboard2.png"
 import PortfolioCard from './PortfolioCard'
 
 const Projects = () => {
+    const containerRef = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    // Calculate which card is currently in view based on scroll position
+    const handleScroll = () => {
+        if (!containerRef.current || containerRef.current.children.length === 0) return;
+
+        const container = containerRef.current;
+        const scrollLeft = container.scrollLeft;
+        const cardWidth = container.children[0].offsetWidth + 20;
+
+        const newIndex = Math.round(scrollLeft / cardWidth);
+        setActiveIndex(newIndex);
+    };
+
+    const scrollToCard = (index) => {
+        if (!containerRef.current || containerRef.current.children.length === 0) return;
+
+        const container = containerRef.current;
+        const cardWidth = container.children[0].offsetWidth + 20;
+
+        container.scrollTo({
+            left: index * cardWidth,
+            behavior: 'smooth'
+        });
+        setActiveIndex(index);
+    };
+
+    // Since you have 4 hardcoded PortfolioCards
+    const totalCards = 2;
+
     return (
         <section id="projects">
-            <div class="projects-heading">
+            <div className="projects-heading">
                 My Projects
             </div>
-            {/* <div class="project-cards">
-            <div class="card project-card-1">
-                <div class="project-title">
-                    Web Design
-                </div>
-                <div class="project-text">
-                    Gym Website
-                </div>
+
+            {/* Added ref and onScroll event to the container */}
+            <div
+                className="project-cards"
+                ref={containerRef}
+                onScroll={handleScroll}
+            >
+                <PortfolioCard
+                    className="card"
+                    title='Web Design'
+                    subtitle='Gaming Community Website'
+                    backgroundColor="var(--secondary-color-red)"
+                    imageContainerStyle={{
+                        bottom: "11px",
+                        right: "3px",
+                        gap: "14px"
+                    }}
+                    images={[
+                        { src: GamingCommunityHome, width: "118px", rotate: -10 },
+                        { src: GamingCommunityAbout, width: "118px", rotate: -10, marginBottom: "-10px" },
+                        { src: GamingCommunityFeedback, width: "118px", rotate: -10, marginBottom: "-1px" },
+                    ]}
+                />
+                <PortfolioCard
+                    className="card"
+                    title='Web Design'
+                    subtitle='Gym Website'
+                    backgroundColor="var(--secondary-color-yellow)"
+                    imageContainerStyle={{
+                        bottom: "-236px",
+                        right: "3px",
+                        gap: "20px"
+                    }}
+                    images={[
+                        { src: Gymlaptopimg, width: "185px", rotate: -18 },
+                        { src: GymPhoneimg, width: "92px", rotate: -18, marginBottom: "-10px" }
+                    ]}
+                />
+                <PortfolioCard
+                    className="card"
+                    title='Graphic Design'
+                    subtitle='AWS Cloud Club Captainship Poster'
+                    backgroundColor="var(--secondary-color-green)"
+                    imageContainerStyle={{
+                        bottom: "50px",
+                        right: "31px",
+                        gap: "0px"
+                    }}
+                    images={[
+                        { src: AWS1, width: "160px", rotate: -5 },
+                        { src: AWS2, width: "160px", rotate: 9, marginBottom: "-36px" },
+                    ]}
+                />
+                <PortfolioCard
+                    className="card"
+                    title='Graphic Design'
+                    subtitle='AWS Cloud Club Captainship Poster'
+                    backgroundColor="var(--secondary-color-green)"
+                    imageContainerStyle={{
+                        bottom: "50px",
+                        right: "31px",
+                        gap: "0px"
+                    }}
+                    images={[
+                        { src: AWS1, width: "160px", rotate: -5 },
+                        { src: AWS2, width: "160px", rotate: 9, marginBottom: "-36px" },
+                    ]}
+                />
             </div>
 
-            <div class="card project-card-2">
-                <div class="project-title">
-                    Graphic Design
-                </div>
-                <div class="project-text">
-                    Poster for SE Society
-                </div>
-            </div>
-
-            <div class="card project-card-3">
-                <div class="project-title">
-                    Game Design
-                </div>
-                <div class="project-text">
-                    Tic Tac Toe in JS
-                </div>
-            </div>
-        </div> */}
-            <div className="project-cards">
-
-                <PortfolioCard
-                    category="App Design"
-                    title="Food Delivery App"
-                    desc="End-to-end UX & UI for a modern ordering experience"
-                    tags={["Figma", "UX", "Prototype"]}
-                    color="var(--secondary-color-yellow)"
-                    textColor="#ffffff"
-                    images={[
-                        { src: "/screen1.png", w: 70, h: 110, rotate: -6, ty: 8, shape: "phone" },
-                        { src: "/screen2.png", w: 70, h: 110, rotate: 5, ty: 0, shape: "phone" },
-                    ]}
-                    onClick={() => console.log("clicked")}
-                />
-
-                <PortfolioCard
-                    category="App Design"
-                    title="Food Delivery App"
-                    desc="End-to-end UX & UI for a modern ordering experience"
-                    tags={["Figma", "UX", "Prototype"]}
-                    color="var(--secondary-color-green)"
-                    textColor="#ffffff"
-                    images={[
-                        { src: "/screen1.png", w: 70, h: 110, rotate: -6, ty: 8, shape: "phone" },
-                        { src: "/screen2.png", w: 70, h: 110, rotate: 5, ty: 0, shape: "phone" },
-                    ]}
-                    onClick={() => console.log("clicked")}
-                />
-
-                <PortfolioCard
-                    category="App Design"
-                    title="Food Delivery App"
-                    desc="End-to-end UX & UI for a modern ordering experience"
-                    tags={["Figma", "UX", "Prototype"]}
-                    color="var(--secondary-color-red)"
-                    textColor="#ffffff"
-                    images={[
-                        { src: "/screen1.png", w: 70, h: 110, rotate: -6, ty: 8, shape: "phone" },
-                        { src: "/screen2.png", w: 70, h: 110, rotate: 5, ty: 0, shape: "phone" },
-                    ]}
-                    onClick={() => console.log("clicked")}
-                />
+            {/* Added Slider Dots */}
+            <div className="slider-dots">
+                {Array.from({ length: totalCards }).map((_, index) => (
+                    <div
+                        key={index}
+                        className={`dot ${activeIndex === index ? 'active' : ''}`}
+                        onClick={() => scrollToCard(index)}
+                    ></div>
+                ))}
             </div>
         </section>
     )

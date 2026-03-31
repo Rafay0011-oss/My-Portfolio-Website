@@ -1,175 +1,90 @@
-.pc-card {
-    border-radius: 20px;
-    padding: 1.6rem;
-    margin-right: 30px;
-    min-height: 280px;
-    width: 360px;
+.card-container {
+    width: 320px;
+    height: 260px;
+    border-radius: 18px;
+    padding: 30px;
     position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: transform 0.28s cubic-bezier(0.22, 0.68, 0, 1.2);
+    flex-shrink: 0;
+    font-family: sans-serif;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.pc-deco-lg,
-.pc-deco-sm {
-    position: absolute;
-    border-radius: 50%;
-    background: rgb(0 0 0 / 10%);
-    pointer-events: none;
-}
 
-.pc-deco-lg {
-    width: 160px;
-    height: 160px;
-    top: -40px;
-    right: -30px;
-}
-
-.pc-deco-sm {
-    width: 90px;
-    height: 90px;
-    bottom: 20px;
-    right: 50px;
-}
-
-/* ── Text block ── */
-.pc-text {
-    position: relative;
-    z-index: 2;
-    max-width: 54%;
-}
-
-.pc-category {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    opacity: 0.65;
-    margin: 0 0 6px;
-}
-
-.pc-title {
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.1;
-    margin: 0 0 6px;
-}
-
-.pc-desc {
-    font-size: 13px;
-    font-weight: 300;
-    opacity: 0.72;
+.card-text h2 {
+    color: white;
     margin: 0;
-    line-height: 1.5;
+    font-size: 26px;
+    font-weight: 700;
 }
 
-/* ── Image slots ── */
-.pc-images {
+.card-text p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* phones container */
+
+.phones {
     position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 46%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 1rem 1rem 1rem 0;
-    pointer-events: none;
+    align-items: flex-end;
 }
 
-.pc-img-slot {
-    overflow: hidden;
-    border: 1.5px dashed rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-shrink: 0;
+/* phone mockups */
+
+.phone-image {
     position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
 }
 
-.pc-img-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.phone-image:hover {
+    transform: scale(1.05);
 }
 
-.pc-placeholder-icon {
-    opacity: 0.45;
-    color: currentColor;
+/* tilt effects */
+
+.phone-left {
+    transform: rotate(-18deg);
 }
 
-/* ── Browser mockup bar ── */
-.pc-browser-bar {
-    height: 12px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    padding: 0 5px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-}
-
-.pc-browser-dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.45);
-    display: block;
-}
-
-.pc-browser-body {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 100%;
-}
-
-.pc-browser-body img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ── Footer ── */
-.pc-footer {
-    position: relative;
+.phone-center {
+    transform: rotate(-5deg);
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.pc-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+.phone-right {
+    transform: rotate(10deg);
 }
 
-.pc-tag {
+/* inner content */
+
+.screen h4 {
+    margin: 0;
+    font-size: 13px;
+    color: #444;
+}
+
+.screen p {
+    font-size: 12px;
+    margin: 6px 0;
+    color: #666;
+}
+
+.screen span {
+    font-weight: bold;
+    color: black;
+}
+
+.screen button {
+    margin-top: 8px;
+    padding: 5px 10px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 6px;
     font-size: 11px;
-    font-weight: 400;
-    padding: 4px 11px;
-    border-radius: 20px;
-}
-
-.pc-arrow {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
+    cursor: pointer;
 }
