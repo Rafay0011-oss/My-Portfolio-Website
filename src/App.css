@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-color: #394241;
+  --primary-background-color: #f8f7f1;
+  --secondary-color-green: #286f6c;
+  --secondary-color-red: #f16542;
+  --secondary-color-yellow: #ffc549;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+HTML{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}

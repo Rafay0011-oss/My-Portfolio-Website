@@ -1,0 +1,112 @@
+#contact-and-footer {
+  background-color: var(--primary-background-white);
+  box-shadow: -2px -3px 10px 0px #e7e7e7;
+}
+
+#contact {
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-around;
+  gap: 200px;
+}
+
+.contact-heading {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-family: "Vibur", cursive;
+  color: #e54d42;
+}
+
+.contact-text {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.Hire-Btn {
+  padding: 10px 30px;
+  background-color: var(--secondary-color-yellow);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  gap: 6px;
+}
+
+.Hire-Btn img {
+  width: 15px;
+  filter: brightness(0) invert(1);
+
+}
+
+.contact-linkedin,
+.contact-facebook,
+.contact-instagram,
+.contact-x {
+  margin-bottom: 20px;
+}
+
+.contact-accounts {
+  padding-top: 50px;
+}
+
+.contact-link a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #222;
+  font-size: 18px;
+}
+
+.contact-link a:hover {
+  color: var(--secondary-color-green);
+}
+
+hr {
+  margin: 0 70px;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 500px;
+  align-items: center;
+  height: 50px;
+}
+
+.footer-left {
+  font-size: 15px;
+}
+
+.links-label {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.Social-Links {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.Linkedin,
+.Github,
+.Upwork,
+.Instagram {
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e7e7e7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Social-Links img {
+  width: 25px;
+}

@@ -1,0 +1,44 @@
+#projects {
+  padding: 80px 80px;
+  box-shadow: -2px -2px 12px 0px #cfcfcf;
+}
+
+.projects-heading {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.project-cards {
+  display: flex;
+
+}
+
+.card {
+  margin-right: 20px;
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  box-shadow: 8px 9px 20px 4px #e7e7e7;
+}
+
+.card .project-title {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.project-card-1 {
+  background-color: var(--secondary-color-green);
+}
+
+.project-card-2 {
+  background-color: var(--secondary-color-yellow);    
+}
+
+.project-card-3 {
+  background-color: var(--secondary-color-red);
+}

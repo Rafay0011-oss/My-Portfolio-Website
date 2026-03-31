@@ -1,0 +1,175 @@
+.pc-card {
+    border-radius: 20px;
+    padding: 1.6rem;
+    margin-right: 30px;
+    min-height: 280px;
+    width: 360px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.28s cubic-bezier(0.22, 0.68, 0, 1.2);
+}
+
+.pc-deco-lg,
+.pc-deco-sm {
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 10%);
+    pointer-events: none;
+}
+
+.pc-deco-lg {
+    width: 160px;
+    height: 160px;
+    top: -40px;
+    right: -30px;
+}
+
+.pc-deco-sm {
+    width: 90px;
+    height: 90px;
+    bottom: 20px;
+    right: 50px;
+}
+
+/* ── Text block ── */
+.pc-text {
+    position: relative;
+    z-index: 2;
+    max-width: 54%;
+}
+
+.pc-category {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin: 0 0 6px;
+}
+
+.pc-title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0 0 6px;
+}
+
+.pc-desc {
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.72;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ── Image slots ── */
+.pc-images {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 46%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 1rem 1rem 1rem 0;
+    pointer-events: none;
+}
+
+.pc-img-slot {
+    overflow: hidden;
+    border: 1.5px dashed rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.pc-img-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pc-placeholder-icon {
+    opacity: 0.45;
+    color: currentColor;
+}
+
+/* ── Browser mockup bar ── */
+.pc-browser-bar {
+    height: 12px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 0 5px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.pc-browser-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.45);
+    display: block;
+}
+
+.pc-browser-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pc-browser-body img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ── Footer ── */
+.pc-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pc-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.pc-tag {
+    font-size: 11px;
+    font-weight: 400;
+    padding: 4px 11px;
+    border-radius: 20px;
+}
+
+.pc-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}

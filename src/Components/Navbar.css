@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  padding: 0 40px;
+  background-color: var(--primary-background-color);
+}
+
+nav .left {
+  font-family: "Vibur", cursive;
+  font-size: 1.7rem;
+  color: var(--secondary-color-green);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0px 20px;
+  color: var(--primary-color);
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+  font-family: Montserrat, sans-serif;
+  transition: padding 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  color: var(--secondary-color-green);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+nav ul li a::before {
+  content: "(";
+  margin-right: 10px;
+}
+
+nav ul li a::after {
+  content: ")";
+  margin-left: 10px;
+}
+
+nav ul li a:hover {
+  padding: 0 15px;
+  color: var(--secondary-color-green);
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  opacity: 1;
+  color: var(--secondary-color-green);
+}
+
+.right button{
+  background-color:white;
+  padding: 10px 10px;
+  border: 1px solid #103643;
+  color: #103643;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}

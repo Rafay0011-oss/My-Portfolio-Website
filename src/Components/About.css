@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  color: #103643;
+  font-family: Montserrat, sans-serif;
+}
+
+#Skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  box-shadow: -2px -1px 6px 0px #e7e7e7;
+}
+
+.skills-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  height: 90px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skills-card-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.skills-card-content-text {
+  font-size: 15px;
+}
+
+.card-1 .skills-card-img {
+  background: #286f6c;
+}
+
+.card-1 .skills-card-img img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.card-2 .skills-card-img {
+  background: #f1b634;
+}
+
+.card-2 .skills-card-img img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.card-3 .skills-card-img {
+  background: #f16542;
+}
+
+.card-3 .skills-card-img img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.skills-card-content-heading {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px 0px;
+}
+
+.skills-card-cont ent-text {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.skills-right {
+  max-width: 550px;
+  margin-top: 30px;
+}
+
+.skills-right-heading h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.skills-right-text {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.skills-right-figures-head {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.skills-right-figures-text {
+  font-size: 18px;
+}

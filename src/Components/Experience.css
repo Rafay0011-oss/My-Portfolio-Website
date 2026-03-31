@@ -1,0 +1,79 @@
+#Experience {
+  background-color: var(--primary-background-color);
+  padding: 80px 80px;
+  box-shadow: -2px -3px 10px 0px #e7e7e7;
+}
+
+.experience-heading {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.experience-content {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.experience-duration a{
+  text-decoration: none;
+}
+
+.experience-content-right {
+  width: 500px;
+}
+
+.experience-content .experience-info {
+  margin-bottom: 82px;
+}
+
+.experience-content .experience-info .experience-firm {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.experience-position-info {
+  margin-bottom: 30px;
+}
+
+.experience-position-info .experience-position {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.experience-position-info .experience-position::before {
+  content: "";
+  position: absolute;
+  right: 655px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 5px solid var(--primary-background-color);
+  outline: 2px dotted rgba(148, 147, 147, 0.464);
+}
+
+.position-1::before {
+  background-color: var(--secondary-color-green);
+}
+
+.position-2::before {
+  background-color: var(--secondary-color-yellow);
+}
+
+.position-3::before {
+  background-color: var(--secondary-color-red);
+}
+
+.experience-mid-line {
+  background-color: rgba(250, 197, 197, 0.464);
+  width: 2px;
+  margin-left: 174px;
+}
+
+.experience-description{
+  font-size: 16px;
+}

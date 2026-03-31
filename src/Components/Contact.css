@@ -1,0 +1,133 @@
+#Contact {
+    padding: 80px;
+    background-color: var(--primary-background-color);
+
+}
+
+.Contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 40px;
+}
+
+.contact-left h5 {
+    color: var(--secondary-color-red);
+}
+
+.contactpage-heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+
+.gmail {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.gmail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--secondary-color-green);
+}
+
+.phone {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.phone-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--secondary-color-yellow);
+}
+
+.location {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--secondary-color-red);
+}
+
+.gmail,
+.phone,
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gmail img,
+.phone img,
+.location img {
+    width: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.gmail-label, .phone-label, .location-label {
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+
+.contactpage-right {
+    padding: 40px;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 2px 3px 10px 0px #e7e7e7;
+}
+
+
+.contactpage-right .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.contact-form form input,
+.contact-form form textarea {
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.contact-form form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--secondary-color-red);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
