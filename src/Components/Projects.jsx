@@ -5,9 +5,15 @@ import GymPhoneimg from "../assets/project-images/GymPhoneimg.png"
 import GamingCommunityHome from "../assets/project-images/GamingCommunityHome.png"
 import GamingCommunityAbout from "../assets/project-images/GamingCommunityAbout.png"
 import GamingCommunityFeedback from "../assets/project-images/GamingCommunityFeedback.png"
+import Mealo1 from "../assets/project-images/Mealo/Mealo-1.jpeg"
+import Mealo2 from "../assets/project-images/Mealo/Mealo-2.jpeg"
+import Mealo3 from "../assets/project-images/Mealo/Mealo-3.jpeg"
+import Mealo4 from "../assets/project-images/Mealo/Mealo-4.jpeg"
+import Mealo5 from "../assets/project-images/Mealo/Mealo-5.jpeg"
 import AWS1 from "../assets/project-images/Artboard1.png"
 import AWS2 from "../assets/project-images/Artboard2.png"
 import PortfolioCard from './PortfolioCard'
+
 
 const Projects = () => {
     const containerRef = useRef(null);
@@ -55,7 +61,7 @@ const Projects = () => {
             >
                 <PortfolioCard
                     className="card"
-                    title='Web Design'
+                    title='Web Project'
                     subtitle='Gaming Community Website'
                     backgroundColor="var(--secondary-color-red)"
                     imageContainerStyle={{
@@ -71,7 +77,22 @@ const Projects = () => {
                 />
                 <PortfolioCard
                     className="card"
-                    title='Web Design'
+                    title='Graphic Design'
+                    subtitle='AWS Cloud Club Captainship Poster'
+                    backgroundColor="var(--secondary-color-green)"
+                    imageContainerStyle={{
+                        bottom: "50px",
+                        right: "31px",
+                        gap: "0px"
+                    }}
+                    images={[
+                        { src: AWS1, width: "160px", rotate: -5 },
+                        { src: AWS2, width: "160px", rotate: 9, marginBottom: "-36px" },
+                    ]}
+                />
+                <PortfolioCard
+                    className="card"
+                    title='Web Project'
                     subtitle='Gym Website'
                     backgroundColor="var(--secondary-color-yellow)"
                     imageContainerStyle={{
@@ -84,39 +105,25 @@ const Projects = () => {
                         { src: GymPhoneimg, width: "92px", rotate: -18, marginBottom: "-10px" }
                     ]}
                 />
+                
                 <PortfolioCard
                     className="card"
-                    title='Graphic Design'
-                    subtitle='AWS Cloud Club Captainship Poster'
-                    backgroundColor="var(--secondary-color-green)"
+                    title='App Project'
+                    subtitle='Food Delivery App'
+                    backgroundColor="#17a0d6"
                     imageContainerStyle={{
-                        bottom: "50px",
-                        right: "31px",
-                        gap: "0px"
+                        bottom: "-11px",
+                        right: "30px",
+                        gap: "11px"
                     }}
                     images={[
-                        { src: AWS1, width: "160px", rotate: -5 },
-                        { src: AWS2, width: "160px", rotate: 9, marginBottom: "-36px" },
-                    ]}
-                />
-                <PortfolioCard
-                    className="card"
-                    title='Graphic Design'
-                    subtitle='AWS Cloud Club Captainship Poster'
-                    backgroundColor="var(--secondary-color-green)"
-                    imageContainerStyle={{
-                        bottom: "50px",
-                        right: "31px",
-                        gap: "0px"
-                    }}
-                    images={[
-                        { src: AWS1, width: "160px", rotate: -5 },
-                        { src: AWS2, width: "160px", rotate: 9, marginBottom: "-36px" },
+                        { src: Mealo4, width: "100px", rotate: -5 },
+                        { src: Mealo2, width: "100px", rotate: -5 },
+                        { src: Mealo3, width: "100px", rotate: -5 },
                     ]}
                 />
             </div>
 
-            {/* Added Slider Dots */}
             <div className="slider-dots">
                 {Array.from({ length: totalCards }).map((_, index) => (
                     <div

@@ -43,7 +43,7 @@ const About = () => {
                             AI Development
                         </div>
                         <div class="skills-card-content-text">
-                            Generative AI Developer
+                            Agentic AI Developer
                         </div>
                     </div>
                 </div>
