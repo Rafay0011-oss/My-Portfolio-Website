@@ -6,13 +6,23 @@ body {
 }
 
 #Skills {
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  box-shadow: -2px -1px 6px 0px #e7e7e7;
+}
+
+.skills-heading{
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.skills-content{
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   gap: 40px;
-  padding: 50px;
-  font-family: Arial, sans-serif;
-  box-shadow: -2px -1px 6px 0px #e7e7e7;
+  padding-top: 50px;
 }
 
 .skills-left {

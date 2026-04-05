@@ -22,7 +22,6 @@ const Projects = () => {
     const containerRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
 
-    // Calculate which card is currently in view based on scroll position
     const handleScroll = () => {
         if (!containerRef.current || containerRef.current.children.length === 0) return;
 
@@ -47,7 +46,6 @@ const Projects = () => {
         setActiveIndex(index);
     };
 
-    // Since you have 4 hardcoded PortfolioCards
     const totalCards = 2;
 
     return (
@@ -56,7 +54,6 @@ const Projects = () => {
                 My Projects
             </div>
 
-            {/* Added ref and onScroll event to the container */}
             <div
                 className="project-cards"
                 ref={containerRef}
