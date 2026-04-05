@@ -19,13 +19,13 @@ const Footer = () => {
                     </div>
                     <p className="links-label">FIND ME ON</p>
                     <div className="Social-Links">
-                        <a className="Linkedin" href="https://www.linkedin.com/in/abdur-rafay" target="_blank" rel="noopener noreferrer">
+                        <a className="Linkedin" href="https://www.linkedin.com/in/abdur-rafay-4b77952b0/?skipRedirect=true" target="_blank" rel="noopener noreferrer">
                             <img src={linkedin} alt="LinkedIn" />
                         </a>
-                        <a className="Github" href="https://github.com/rafay0011-oss" target="_blank" rel="noopener noreferrer">
+                        <a className="Github" href="https://github.com/Rafay0011-oss" target="_blank" rel="noopener noreferrer">
                             <img src={github} alt="GitHub" />
                         </a>
-                        <a className="Upwork" href="https://www.upwork.com/freelancers/~01d1978d1503cbb4cd" target="_blank" rel="noopener noreferrer">
+                        <a className="Upwork" href="https://www.upwork.com/freelancers/~014bc24c47c5777a0c" target="_blank" rel="noopener noreferrer">
                             <img src={upwork} alt="Upwork" />
                         </a>
                         <a className="Instagram" href="https://www.instagram.com/mee.rafay/" rel="noopener noreferrer">
@@ -38,14 +38,14 @@ const Footer = () => {
                         <div>Hire me </div>
                         <img src={UA} alt="Up Arrow" />
                     </div>
-                 
+
                     <div class="contact-accounts">
                         <div class="contact-linkedin social">
                             <div class="contact-link">
                                 <a href="#Skills">Services</a>
                             </div>
                         </div>
-            
+
                         <div class="contact-facebook social">
                             <div class="contact-link">
                                 <a href="#Experience">Crediantials</a>

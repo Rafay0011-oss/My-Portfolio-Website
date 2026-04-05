@@ -1,7 +1,7 @@
 #Contact {
     padding: 80px;
     background-color: var(--primary-background-color);
-
+    box-shadow: -2px -3px 10px 0px #e7e7e7;
 }
 
 .Contact-content {

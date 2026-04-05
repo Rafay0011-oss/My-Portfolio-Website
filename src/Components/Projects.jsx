@@ -5,15 +5,18 @@ import GymPhoneimg from "../assets/project-images/GymPhoneimg.png"
 import GamingCommunityHome from "../assets/project-images/GamingCommunityHome.png"
 import GamingCommunityAbout from "../assets/project-images/GamingCommunityAbout.png"
 import GamingCommunityFeedback from "../assets/project-images/GamingCommunityFeedback.png"
-import Mealo1 from "../assets/project-images/Mealo/Mealo-1.jpeg"
 import Mealo2 from "../assets/project-images/Mealo/Mealo-2.jpeg"
 import Mealo3 from "../assets/project-images/Mealo/Mealo-3.jpeg"
 import Mealo4 from "../assets/project-images/Mealo/Mealo-4.jpeg"
-import Mealo5 from "../assets/project-images/Mealo/Mealo-5.jpeg"
 import AWS1 from "../assets/project-images/Artboard1.png"
 import AWS2 from "../assets/project-images/Artboard2.png"
+import HD1 from "../assets/project-images/Home-Decore-UI/Home-page.jpg"
+import HD2 from "../assets/project-images/Home-Decore-UI/Product-Detail.jpg"
+import HD3 from "../assets/project-images/Home-Decore-UI/Shopping-Cart.jpg"
+import N1 from "../assets/project-images/Nexus/Nexus1.png"
+import N2 from "../assets/project-images/Nexus/Nexus2.png"
+import N3 from "../assets/project-images/Nexus/Nexus3.png"
 import PortfolioCard from './PortfolioCard'
-
 
 const Projects = () => {
     const containerRef = useRef(null);
@@ -75,21 +78,24 @@ const Projects = () => {
                         { src: GamingCommunityFeedback, width: "118px", rotate: -10, marginBottom: "-1px" },
                     ]}
                 />
+            
                 <PortfolioCard
                     className="card"
-                    title='Graphic Design'
-                    subtitle='AWS Cloud Club Captainship Poster'
+                    title='UI Design Project'
+                    subtitle='Home Decor Items Website UI Design'
                     backgroundColor="var(--secondary-color-green)"
                     imageContainerStyle={{
-                        bottom: "50px",
-                        right: "31px",
-                        gap: "0px"
+                        bottom: "-100px",
+                        right: "20px",
+                        gap: "11px"
                     }}
                     images={[
-                        { src: AWS1, width: "160px", rotate: -5 },
-                        { src: AWS2, width: "160px", rotate: 9, marginBottom: "-36px" },
+                        { src: HD1, width: "100px", rotate: -12 },
+                        { src: HD2, width: "100px", rotate: -12, marginBottom: "66px" },
+                        { src: HD3, width: "100px", rotate: -12, marginBottom: "132px" },
                     ]}
                 />
+
                 <PortfolioCard
                     className="card"
                     title='Web Project'
@@ -122,6 +128,24 @@ const Projects = () => {
                         { src: Mealo3, width: "100px", rotate: -5 },
                     ]}
                 />
+
+                <PortfolioCard
+                    className="card"
+                    title='Web Project'
+                    subtitle='Nexus App'
+                    backgroundColor="#52da40"
+                    imageContainerStyle={{
+                        bottom: "35px",
+                        right: "35px",
+                        gap: "0px"
+                    }}
+                    images={[
+                        { src: N3, width: "170px", rotate: 10 },
+                        { src: N2, width: "145px", rotate: -5 },
+                    ]}
+                />
+
+                
             </div>
 
             <div className="slider-dots">
