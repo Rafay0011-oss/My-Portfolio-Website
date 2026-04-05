@@ -34,7 +34,7 @@ const Credentials = () => {
                         Front End Development Internship
                     </div>
                     <div class="credentials-duration">
-                        <a href="https://www.coursera.org/account/accomplishments/professional-cert/7J0FDQMN2MCG" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/10BE-ZcQB-ppqxLY2xdfxru9RUfZjcKHI/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                             View Certificate
                         </a>
                     </div>

@@ -58,7 +58,7 @@ const About = () => {
                         <h1>What do I help?</h1>
                     </div>
                     <div class="skills-right-text">
-                        I’m a web developer and graphic designer passionate about creating visually engaging and highly functional digital experiences.  <br />
+                        I’m a web developer and designer passionate about creating visually engaging and highly functional digital experiences.  <br />
                         I enjoy turning ideas into impactful digital products. I’m constantly learning and improving to stay aligned with the latest trends in both design and development.
                     </div>
                     <div class="skills-right-figures">
