@@ -17,7 +17,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="right"> 
-                    <button onClick={() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' })}>
+                    <button onClick={() => document.getElementById('Contact').scrollIntoView({behavior:'smooth' })}>
                         GET IN TOUCH
                     </button>
             </div>
