@@ -75,9 +75,9 @@ const Projects = () => {
                     title: 'Web Project',
                     subtitle: 'Gaming Community Website',
                     description: 'A dedicated platform for gamers to connect, share feedback, and discover local businesses. Built with React and optimized for performance.',
-                    techStack: 'React, Node.js, CSS Modules',
-                    liveLink: '#',
-                    githubLink: '#'
+                    techStack: 'HTML, CSS',
+                    liveLink: 'https://gaming-community-website.vercel.app/',
+                    githubLink: 'https://github.com/Rafay0011-oss/Gaming-Community-Website'
                 })}>
                     <PortfolioCard
                         className="card"
@@ -119,9 +119,9 @@ const Projects = () => {
                     title: 'Web Project',
                     subtitle: 'Gym Website',
                     description: 'A responsive landing page and membership portal for a local fitness center. Features include class schedules and trainer bios.',
-                    techStack: 'React, Tailwind CSS',
-                    liveLink: '#',
-                    githubLink: '#'
+                    techStack: 'React, CSS',
+                    liveLink: 'https://gym-website-frontend-10x5chhk5-rafay0011-oss-projects.vercel.app/',
+                    githubLink: 'https://github.com/Rafay0011-oss/Gym-Website-Frontend'
                 })}>
                     <PortfolioCard
                         className="card"
@@ -163,8 +163,8 @@ const Projects = () => {
                     subtitle: 'Nexus App',
                     description: 'A sophisticated web application aimed at enhancing productivity and team collaboration.',
                     techStack: 'MERN Stack (MongoDB, Express, React, Node.js)',
-                    liveLink: '#',
-                    githubLink: '#'
+                    liveLink: 'https://nexus-iota-five-five.vercel.app/login',
+                    githubLink: 'https://github.com/Rafay0011-oss/nexus-iota-five'
                 })}>
                     <PortfolioCard
                         className="card"
