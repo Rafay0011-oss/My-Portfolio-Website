@@ -127,3 +127,56 @@ body {
 .skills-right-figures-text {
   font-size: 18px;
 }
+
+@media (max-width: 992px) {
+  .skills-content {
+    flex-direction: column-reverse; /* Puts the "What do I help?" text above the cards */
+    align-items: center;            /* Centers everything horizontally */
+    gap: 50px;
+  }
+
+  .skills-right {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  #Skills {
+    padding: 40px 20px; /* Reduce padding on mobile */
+  }
+
+  .skills-heading {
+    font-size: 40px; /* Scale down main heading */
+  }
+
+  .skills-right-heading h1 {
+    font-size: 35px; /* Scale down secondary heading */
+  }
+
+  .skills-right-text {
+    font-size: 15px; /* Slightly smaller text for readability */
+  }
+
+  .skills-right-figures-head {
+    font-size: 32px;
+  }
+}
+
+/* Small Mobile Screens (under 480px) */
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 32px;
+  }
+
+  .skills-right-heading h1 {
+    font-size: 28px;
+  }
+
+  /* Make cards 100% width of their container so they don't break the layout on tiny screens */
+  .skills-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}

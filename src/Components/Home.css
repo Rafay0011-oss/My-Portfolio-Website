@@ -92,3 +92,56 @@
   font-size: 1rem;
   line-height: 1.5;
 }
+
+
+/* --- RESPONSIVE MEDIA QUERIES (NEW) --- */
+
+/* Tablets & Smaller Laptops (under 992px) */
+@media (max-width: 992px) {
+  .text {
+    width: 40%; /* Give text a bit more room */
+  }
+  .text h1 {
+    font-size: 3rem; /* Scale down heading */
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  .text {
+    width: 45%; /* Maximize space for each half on a 50/50 static mobile split */
+  }
+  
+  .left-text {
+    left: 2%; /* Push text slightly closer to the edges to prevent center overlap */
+  }
+  
+  .right-text {
+    right: 2%;
+  }
+
+  .text h1 {
+    font-size: 2.2rem;
+  }
+
+  .text p {
+    font-size: 0.9rem; /* Make paragraph slightly smaller */
+    line-height: 1.4;
+  }
+}
+
+/* Small Mobile Screens (under 480px) */
+@media (max-width: 480px) {
+  .text {
+    width: 47%;
+  }
+
+  .text h1 {
+    font-size: 1.6rem; /* Prevent huge words from breaking layout */
+  }
+
+  .text p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+}

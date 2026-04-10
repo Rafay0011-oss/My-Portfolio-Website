@@ -197,3 +197,78 @@
     transform: translateY(0) scale(1);
   }
 }
+
+@media (max-width: 992px) {
+  #projects {
+    padding: 60px 20px; /* Reduce horizontal padding to give cards more space */
+  }
+
+  .projects-heading {
+    font-size: 40px;
+  }
+}
+
+/* Mobile Devices (under 768px) */
+@media (max-width: 768px) {
+  #projects {
+    padding: 40px 10px; 
+  }
+
+  .projects-heading {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .card-wrapper {
+    /* Optional: Ensure the inner PortfolioCard doesn't overflow the viewport width */
+    max-width: 85vw; 
+  }
+
+  /* Shrink Modal Content */
+  .modal-content {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .modal-header h2 {
+    font-size: 24px;
+  }
+
+  .modal-description {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .modal-tech {
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .close-modal {
+    top: 15px;
+    right: 20px;
+  }
+}
+
+/* Small Mobile Screens (under 480px) */
+@media (max-width: 480px) {
+  .projects-heading {
+    font-size: 28px;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+
+  /* Stack buttons vertically on small screens */
+  .modal-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-btn {
+    width: 100%;
+    padding: 12px 0px; 
+  }
+}

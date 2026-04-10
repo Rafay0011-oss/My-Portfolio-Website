@@ -1,28 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import "./Navbar.css"
+import "./Navbar.css";
 
 const Navbar = () => {
+    // State to track if the mobile menu is open or closed
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <nav id="Navbar">
-            <div class="left">
+        // Add the 'open' class conditionally based on state
+        <nav id="Navbar" className={isOpen ? "open" : ""}>
+            <div className="left">
                 Abdur Rafay
             </div>
-            <div class="mid">
+
+            {/* Hamburger Icon (3 lines) */}
+            <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+                <span className="line"></span>
+                <span className="line"></span>
+                <span className="line"></span>
+            </div>
+
+            <div className="mid">
                 <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="#Skills">SERVICES</a></li>
-                    <li><a href="#Experience">CREDENTIALS</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
+                    {/* Close the menu when a link is clicked */}
+                    <li><a href="/" onClick={() => setIsOpen(false)}>HOME</a></li>
+                    <li><a href="#Skills" onClick={() => setIsOpen(false)}>SERVICES</a></li>
+                    <li><a href="#Experience" onClick={() => setIsOpen(false)}>CREDENTIALS</a></li>
+                    <li><a href="#projects" onClick={() => setIsOpen(false)}>PROJECTS</a></li>
                 </ul>
             </div>
+            
             <div className="right"> 
-                    <button onClick={() => document.getElementById('Contact').scrollIntoView({behavior:'smooth' })}>
-                        GET IN TOUCH
-                    </button>
+                <button onClick={() => {
+                    document.getElementById('Contact').scrollIntoView({behavior:'smooth' });
+                    setIsOpen(false); // Close menu when button is clicked
+                }}>
+                    GET IN TOUCH
+                </button>
             </div>
         </nav>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;
