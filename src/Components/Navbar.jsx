@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-    // State to track if the mobile menu is open or closed
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        // Add the 'open' class conditionally based on state
         <nav id="Navbar" className={isOpen ? "open" : ""}>
             <div className="left">
                 Abdur Rafay
@@ -22,10 +20,9 @@ const Navbar = () => {
 
             <div className="mid">
                 <ul>
-                    {/* Close the menu when a link is clicked */}
                     <li><a href="/" onClick={() => setIsOpen(false)}>HOME</a></li>
                     <li><a href="#Skills" onClick={() => setIsOpen(false)}>SERVICES</a></li>
-                    <li><a href="#Experience" onClick={() => setIsOpen(false)}>CREDENTIALS</a></li>
+                    <li><a href="#Credentials" onClick={() => setIsOpen(false)}>CREDENTIALS</a></li>
                     <li><a href="#projects" onClick={() => setIsOpen(false)}>PROJECTS</a></li>
                 </ul>
             </div>
