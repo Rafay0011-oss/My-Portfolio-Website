@@ -174,9 +174,5 @@ body {
     font-size: 28px;
   }
 
-  /* Make cards 100% width of their container so they don't break the layout on tiny screens */
-  .skills-card {
-    width: 100%;
-    max-width: 320px;
-  }
+ 
 }

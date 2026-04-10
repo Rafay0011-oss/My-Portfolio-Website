@@ -11,7 +11,6 @@
   height: 100%;
 }
 
-/* Common image */
 .image {
   position: absolute;
   top: 0;
@@ -26,9 +25,9 @@
   object-fit: contain;
   position: absolute;
   transition: transform 0.3s ease;
+
 }
 
-/* LEFT side */
 .image.left {
   left: 0;
 }
@@ -38,14 +37,16 @@
 }
 
 .image.left img {
+  right: auto;
   left: 0;
 }
 
 .image.right img {
   right: 0;
+  left: auto;
+
 }
 
-/* Divider */
 .divider {
   position: absolute;
   top: 0;
@@ -56,7 +57,6 @@
   transition: left 0.4s ease;
 }
 
-/* TEXT BASE */
 .text {
   position: absolute;
   top: 50%;
@@ -66,26 +66,22 @@
   transition: all 0.3s ease;
 }
 
-/* LEFT TEXT */
 .left-text {
   left: 5%;
   text-align: left;
 }
 
-/* RIGHT TEXT */
 .right-text {
   right: 5%;
   text-align: right;
 }
 
-/* HEADINGS */
 .text h1 {
   font-size: 4rem;
   margin: 0;
   font-weight: 700;
 }
 
-/* PARAGRAPH */
 .text p {
   margin-top: 10px;
   color: #111;
@@ -94,28 +90,25 @@
 }
 
 
-/* --- RESPONSIVE MEDIA QUERIES (NEW) --- */
-
-/* Tablets & Smaller Laptops (under 992px) */
 @media (max-width: 992px) {
   .text {
-    width: 40%; /* Give text a bit more room */
+    width: 40%;
   }
+
   .text h1 {
-    font-size: 3rem; /* Scale down heading */
+    font-size: 3rem;
   }
 }
 
-/* Mobile Devices (under 768px) */
 @media (max-width: 768px) {
   .text {
-    width: 45%; /* Maximize space for each half on a 50/50 static mobile split */
+    width: 45%;
   }
-  
+
   .left-text {
-    left: 2%; /* Push text slightly closer to the edges to prevent center overlap */
+    left: 2%;
   }
-  
+
   .right-text {
     right: 2%;
   }
@@ -125,19 +118,18 @@
   }
 
   .text p {
-    font-size: 0.9rem; /* Make paragraph slightly smaller */
+    font-size: 0.9rem;
     line-height: 1.4;
   }
 }
 
-/* Small Mobile Screens (under 480px) */
 @media (max-width: 480px) {
   .text {
     width: 47%;
   }
 
   .text h1 {
-    font-size: 1.6rem; /* Prevent huge words from breaking layout */
+    font-size: 1.6rem;
   }
 
   .text p {

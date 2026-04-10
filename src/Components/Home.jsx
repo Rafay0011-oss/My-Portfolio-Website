@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   const handleMouseLeave = () => {
-    setOffset(0); 
+    setOffset(0); // reset to center
   };
   return (
     <div
