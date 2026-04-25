@@ -10,7 +10,7 @@ import ProjectsHeader from '../Components/Projects/ProjectsHeader'
 import BusinessWebsites from '../Components/Projects/BusinessWebsites'
 import EntertainmentWebsites from '../Components/Projects/EntertainmentWebsites'
 import UIUXprojects from '../Components/Projects/UIUXprojects'
-import Js from "../assets/javascript.png"
+import Js from "../assets/Javascript.png"
 import react from "../assets/react.png"
 import figma from "../assets/figma.png"
 import illustrator from "../assets/illustrator.png"
