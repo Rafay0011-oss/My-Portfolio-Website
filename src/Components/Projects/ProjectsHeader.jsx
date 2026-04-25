@@ -1,6 +1,6 @@
 import React from 'react'
 import BG from "../../assets/Black.jpg"
-import Js from "../../assets/javascript.png"
+import Js from "../../assets/Javascript.png"
 import react from "../../assets/react.png"
 import "./ProjectsHeader.css"
 
