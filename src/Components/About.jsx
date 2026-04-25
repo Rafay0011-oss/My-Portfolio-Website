@@ -7,7 +7,7 @@ import nodejs from "../assets/nodejs.png"
 import mongodb from "../assets/mongodb.png"
 import javascript from "../assets/Javascript.png"
 import figma from "../assets/figma.png"
-import illustrator from "../assets/illustrator.png"
+import illustrator from "../assets/Illustrator.png"
 
 const About = () => {
     return (
