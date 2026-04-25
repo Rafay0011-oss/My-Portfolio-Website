@@ -1,0 +1,130 @@
+#Project-header {
+  padding: 150px 5%;
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-content {
+  position: relative;
+  background: transparent;
+  padding: 40px;
+  border-radius: 12px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  max-width: 1076px;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: 80px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  color: rgb(184, 226, 6);
+  line-height: 1.2;
+}
+
+.header-description {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.icon-1 {
+  width: 50px;
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  rotate: -28deg;
+  z-index: 3;
+  opacity: 0.8;
+}
+
+.icon-2 {
+  width: 50px;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 3;
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .header-title {
+    font-size: 60px;
+  }
+
+  .header-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #Project-header {
+    padding: 100px 5%;
+  }
+
+  .header-title {
+    font-size: 45px;
+  }
+
+  .header-description {
+    font-size: 16px;
+  }
+
+  .icon-1, .icon-2 {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #Project-header {
+    padding: 80px 5%;
+  }
+
+  .header-content {
+    padding: 20px;
+  }
+
+  .header-title {
+    font-size: 36px;
+  }
+
+  .header-description {
+    font-size: 15px;
+  }
+
+  .icon-1, .icon-2 {
+    width: 30px;
+  }
+  
+  .icon-1 {
+    bottom: 10%;
+  }
+
+  .icon-2 {
+    top: 10%;
+  }
+}

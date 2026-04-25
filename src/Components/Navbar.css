@@ -1,21 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* --- YOUR ORIGINAL STYLES --- */
 nav {
   display: flex;
   gap: 70px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 60px;
   padding: 0 40px;
-  background-color: var(--primary-background-color);
+  position: relative;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 nav .left {
   font-family: "Vibur", cursive;
   font-size: 1.7rem;
-  color: var(--secondary-color-green);
+  color: rgb(184, 226, 6);
+  position: relative;
+}
+
+.mid {
+  position: relative;
+  z-index: 100;
 }
 
 nav ul {
@@ -25,8 +39,8 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  padding: 0px 20px;
-  color: var(--primary-color);
+  padding: 0px 10px;
+  color: white;
   font-size: 15px;
   font-weight: 600;
   position: relative;
@@ -36,7 +50,7 @@ nav ul li a {
 
 nav ul li a::before,
 nav ul li a::after {
-  color: var(--secondary-color-green);
+  color: rgb(184, 226, 6);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -53,26 +67,15 @@ nav ul li a::after {
 
 nav ul li a:hover {
   padding: 0 15px;
-  color: var(--secondary-color-green);
+  color: rgb(184, 226, 6);
 }
 
 nav ul li a:hover::before,
 nav ul li a:hover::after {
   opacity: 1;
-  color: var(--secondary-color-green);
+  color: rgb(184, 226, 6);
 }
 
-.right button{
-  background-color:white;
-  padding: 10px 10px;
-  border: 1px solid #103643;
-  color: #103643;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-/* --- HAMBURGER MENU ICON (Hidden on Desktop) --- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -83,30 +86,31 @@ nav ul li a:hover::after {
 .hamburger .line {
   width: 25px;
   height: 3px;
-  background-color: var(--secondary-color-green, #103643); /* Added fallback color */
+  background-color: var(--secondary-color-green, #103643);
   border-radius: 3px;
   transition: all 0.3s ease;
+  margin: 0;
+
 }
 
-/* --- RESPONSIVE MEDIA QUERIES --- */
-
-/* Tablets & Smaller Laptops */
 @media (max-width: 992px) {
   nav {
     gap: 20px;
     padding: 0 20px;
   }
+
   nav ul li a {
     padding: 0px 10px;
     font-size: 14px;
   }
 }
 
-/* Mobile Devices (under 768px) */
 @media (max-width: 768px) {
   nav {
-    justify-content: space-between; /* Pushes Logo left, Hamburger right */
-    flex-wrap: wrap;                /* Allows menu to drop below navbar */
+    justify-content: space-between;
+    /* Pushes Logo left, Hamburger right */
+    flex-wrap: wrap;
+    /* Allows menu to drop below navbar */
     height: auto;
     padding: 15px 20px;
     gap: 0;
@@ -118,15 +122,14 @@ nav ul li a:hover::after {
   }
 
   /* Hide the links and button by default on mobile */
-  .mid, 
-  .right {
-    display: none; 
-    width: 100%;   /* Make them take full width when shown */
+  .mid {
+    display: none;
+    width: 100%;
+    /* Make them take full width when shown */
   }
 
   /* SHOW the links and button ONLY when 'open' class is active */
-  nav.open .mid,
-  nav.open .right {
+  nav.open .mid {
     display: flex;
     justify-content: center;
   }
@@ -135,13 +138,9 @@ nav ul li a:hover::after {
     margin-top: 20px;
   }
 
-  nav.open .right {
-    margin-top: 15px;
-    margin-bottom: 10px;
-  }
-
   nav ul {
-    flex-direction: column; /* Stack the links vertically */
+    flex-direction: column;
+    /* Stack the links vertically */
     align-items: center;
     gap: 20px;
     padding: 0;

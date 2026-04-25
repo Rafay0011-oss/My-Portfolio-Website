@@ -5,10 +5,12 @@ import linkedin from "../assets/linkedin2.png"
 import github from "../assets/github.png"
 import upwork from "../assets/upwork.png"
 import insta from "../assets/instagram.png"
+import BG from "../assets/White.jpg"
 
 const Footer = () => {
     return (
         <section id="contact-and-footer">
+            <img src={BG} alt="" className='bg-image'/>
             <div id="contact">
                 <div className="contact-left">
                     <div class="contact-heading">
@@ -42,13 +44,13 @@ const Footer = () => {
                     <div class="contact-accounts">
                         <div class="contact-linkedin social">
                             <div class="contact-link">
-                                <a href="#Skills">Services</a>
+                                <a href="#Skills">About</a>
                             </div>
                         </div>
 
                         <div class="contact-facebook social">
                             <div class="contact-link">
-                                <a href="#Experience">Crediantials</a>
+                                <a href="#Services">Services</a>
                             </div>
                         </div>
 
@@ -70,7 +72,7 @@ const Footer = () => {
             <hr />
             <div id="footer">
                 <div className="footer-left">
-                    &copy; 2025 YourWebsiteName. All rights reserved.
+                    &copy; 2026 \\ YourWebsiteName. All rights reserved.
                 </div>
                 <div className="footer-right">
                     Designed by <span style={{ color: "var(--secondary-color-green)", fontWeight: "600" }}>Abdur Rafay</span>

@@ -1,111 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-  color: #103643;
-  font-family: Montserrat, sans-serif;
-}
-
 #Skills {
-  padding: 50px;
+  position: relative;
+  padding: 100px 50px;
   font-family: Arial, sans-serif;
-  box-shadow: -2px -1px 6px 0px #e7e7e7;
-}
-
-.skills-heading{
-  font-size: 50px;
-  font-weight: 800;
-  text-align: center;
-}
-
-.skills-content{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   gap: 40px;
-  padding-top: 50px;
+  overflow: hidden;
+  z-index: 100;
+  color: black;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .skills-left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 550px;
 }
 
-.skills-card {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  padding: 10px 20px;
+.skills {
+  position: relative;
+  background: transparent;
+  padding: 20px 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  width: 300px;
-  height: 90px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.skills-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.skills-heading {
+  font-size: 40px;
+  font-weight: bold;
 }
 
-.skills-card-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.skills-icons {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  font-size: 22px;
-  color: #fff;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.skills-card-content-text {
-  font-size: 15px;
+.skills-icons img {
+  width: 50px;
 }
 
-.card-1 .skills-card-img {
-  background: #286f6c;
+.achievements {
+  position: relative;
+  background: transparent;
+  padding: 20px 30px;
+  border-radius: 12px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-top: 26px;
 }
 
-.card-1 .skills-card-img img {
-  width: 20px;
-  filter: brightness(0) invert(1);
+.achievemnts-heading {
+  font-size: 40px;
+  font-weight: bold;
 }
 
-.card-2 .skills-card-img {
-  background: #f1b634;
-}
-
-.card-2 .skills-card-img img {
-  width: 20px;
-  filter: brightness(0) invert(1);
-}
-
-.card-3 .skills-card-img {
-  background: #f16542;
-}
-
-.card-3 .skills-card-img img {
-  width: 20px;
-  filter: brightness(0) invert(1);
-}
-
-.skills-card-content-heading {
-  font-size: 18px;
-  font-weight: 700;
-  padding: 5px 0px;
-}
-
-.skills-card-cont ent-text {
-  font-size: 14px;
-  margin-top: 3px;
+.achievement-item {
+  margin-top: 10px;
 }
 
 .skills-right {
+  width: 100%;
   max-width: 550px;
-  margin-top: 30px;
+  background: transparent;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.027);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .skills-right-heading h1 {
@@ -129,34 +118,33 @@ body {
 }
 
 @media (max-width: 992px) {
-  .skills-content {
-    flex-direction: column-reverse; /* Puts the "What do I help?" text above the cards */
-    align-items: center;            /* Centers everything horizontally */
-    gap: 50px;
+  #Skills {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .skills-right {
-    text-align: center;
-    margin-top: 0;
+  .skills-right,
+  .skills-left {
+    max-width: 100%;
   }
 }
 
-/* Mobile Devices (under 768px) */
 @media (max-width: 768px) {
   #Skills {
-    padding: 40px 20px; /* Reduce padding on mobile */
+    padding: 40px 20px;
   }
 
-  .skills-heading {
-    font-size: 40px; /* Scale down main heading */
+  .skills-heading,
+  .achievemnts-heading {
+    font-size: 32px;
   }
 
   .skills-right-heading h1 {
-    font-size: 35px; /* Scale down secondary heading */
+    font-size: 35px;
   }
 
   .skills-right-text {
-    font-size: 15px; /* Slightly smaller text for readability */
+    font-size: 15px;
   }
 
   .skills-right-figures-head {
@@ -164,15 +152,17 @@ body {
   }
 }
 
-/* Small Mobile Screens (under 480px) */
 @media (max-width: 480px) {
-  .skills-heading {
-    font-size: 32px;
+  .skills-heading,
+  .achievemnts-heading {
+    font-size: 28px;
   }
 
   .skills-right-heading h1 {
     font-size: 28px;
   }
-
- 
+  
+  .skills-icons img {
+    width: 40px;
+  }
 }

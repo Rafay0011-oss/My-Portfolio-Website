@@ -1,0 +1,346 @@
+/* #Hero-Section {
+  position: relative;
+  padding: 80px 120px;
+  color: white;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Hero-Content {
+  position: relative;
+}
+
+.Hero-left {
+  width: 500px;
+}
+
+.Hero-heading {
+  margin-top: 30px;
+  font-size: 44px;
+}
+
+.Hero-Subheading {
+  margin-top: 30px;
+}
+
+.Hero-left-CTA {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+.Hero-left-CTA button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(184, 226, 6);
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.Hero-Social-Links {
+  display: flex;
+  gap: 30px;
+  margin-top: 80px;
+}
+
+.Hero-Linkedin,
+.Hero-Github,
+.Hero-Upwork,
+.Hero-Instagram {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Hero-Social-Links img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.Hero-Right img {
+  width: 643px;
+  height: auto;
+  position: absolute;
+  right: 0px;
+  top: -162px;
+}
+
+.react-icon {
+  position: relative;
+  top: -200px;
+  left: -90px;
+}
+
+.figma-icon {
+  position: relative;
+  top: 100px;
+  right: -40px;
+}
+
+.Js-icon {
+  position: relative;
+  left: -455px;
+  bottom: 60px;
+}
+
+.react-icon img,
+.figma-icon img,
+.Js-icon img {
+  width: 40px;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+} */
+
+#Hero-Section {
+  position: relative;
+  padding: 80px 120px;
+  color: white;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MAIN LAYOUT */
+.Hero-Content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.Hero-left {
+  max-width: 500px;
+  width: 100%;
+}
+
+.Hero-heading {
+  margin-top: 30px;
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+.Hero-Subheading {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+/* CTA BUTTONS */
+.Hero-left-CTA {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.Hero-left-CTA button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(184, 226, 6);
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.Hero-left-CTA button:hover {
+  transform: translateY(-2px);
+}
+
+/* SOCIAL LINKS */
+.Hero-Social-Links {
+  display: flex;
+  gap: 30px;
+  margin-top: 80px;
+}
+
+.Hero-Linkedin,
+.Hero-Github,
+.Hero-Upwork,
+.Hero-Instagram {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Hero-Social-Links img {
+  width: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* RIGHT SIDE IMAGE */
+.Hero-Right img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: -146px;
+}
+
+/* FLOATING ICONS */
+.react-icon {
+  position: relative;
+  top: -70px;
+  left: -90px;
+}
+
+.figma-icon {
+  position: relative;
+  top: 200px;
+  right: -40px;
+}
+
+.Js-icon {
+  position: relative;
+  left: -455px;
+  bottom: -47px;
+}
+
+.react-icon img,
+.figma-icon img,
+.Js-icon img {
+  width: 40px;
+}
+
+/* BLINK ANIMATION */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ========================= */
+/* 🔥 TABLET (≤1024px) */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  #Hero-Section {
+    padding: 60px 60px;
+  }
+
+  .Hero-heading {
+    font-size: 36px;
+  }
+
+  .Hero-Right img {
+    max-width: 450px;
+    top: -100px;
+  }
+}
+
+/* ========================= */
+/* 🔥 MOBILE (≤768px) */
+/* ========================= */
+
+@media (max-width: 768px) {
+  #Hero-Section {
+    padding: 40px 20px;
+  }
+
+  .Hero-Content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Hero-left {
+    width: 100%;
+  }
+
+  .Hero-heading {
+    font-size: 30px;
+  }
+
+  .Hero-Subheading {
+    font-size: 14px;
+  }
+
+  .Hero-left-CTA {
+    justify-content: center;
+  }
+
+  .Hero-Social-Links {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  /* IMAGE ON TOP */
+  .Hero-Right {
+    position: relative;
+    order: 2;
+    margin-bottom: 30px;
+  }
+
+  .Hero-Right img {
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+    top: 73px;
+    right: 0;
+  }
+
+  /* HIDE FLOATING ICONS */
+  .react-icon,
+  .figma-icon,
+  .Js-icon {
+    display: none;
+  }
+}
+
+/* ========================= */
+/* 🔥 SMALL MOBILE (≤480px) */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .Hero-heading {
+    font-size: 26px;
+  }
+
+  .Hero-left-CTA button {
+    width: 100%;
+  }
+}

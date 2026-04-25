@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import "./Navbar.css";
+import BG from "../assets/Black.jpg"
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <nav id="Navbar" className={isOpen ? "open" : ""}>
+            <img src={BG} alt="" className='bg-image' />
             <div className="left">
                 Abdur Rafay
             </div>
@@ -19,19 +22,11 @@ const Navbar = () => {
             <div className="mid">
                 <ul>
                     <li><a href="/" onClick={() => setIsOpen(false)}>HOME</a></li>
-                    <li><a href="#Skills" onClick={() => setIsOpen(false)}>SERVICES</a></li>
-                    <li><a href="#Credentials" onClick={() => setIsOpen(false)}>CREDENTIALS</a></li>
+                    <li><a href="#Skills" onClick={() => setIsOpen(false)}>ABOUT</a></li>
+                    <li><a href="#Services" onClick={() => setIsOpen(false)}>SERVICES</a></li>
                     <li><a href="#projects" onClick={() => setIsOpen(false)}>PROJECTS</a></li>
+                    <li><a href="#Contact" onClick={() => setIsOpen(false)}>CONTACT</a></li>
                 </ul>
-            </div>
-            
-            <div className="right"> 
-                <button onClick={() => {
-                    document.getElementById('Contact').scrollIntoView({behavior:'smooth' });
-                    setIsOpen(false); // Close menu when button is clicked
-                }}>
-                    GET IN TOUCH
-                </button>
             </div>
         </nav>
     );

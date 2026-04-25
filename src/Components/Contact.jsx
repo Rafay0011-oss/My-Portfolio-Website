@@ -1,4 +1,5 @@
 import {React, useState} from 'react'
+import BG from "../assets/Black.jpg"
 import gmail from "../assets/email.png"
 import phone from "../assets/phone-call.png"
 import location from "../assets/pin.png"
@@ -24,13 +25,14 @@ const Contact = () => {
 
     if (data.success) {
       setStatus("Success! Your message is in my inbox.");
-      e.target.reset();z
+      e.target.reset();
     } else {
       setStatus("Error: " + data.message);
     }
   };
   return (
       <div id='Contact'>
+        <img src={BG} alt="" className='bg-image'/>
         <div className="Contact-content">
           <div className="contact-left">
             <h5>GET IN TOUCH</h5>

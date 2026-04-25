@@ -1,77 +1,73 @@
 import React from 'react'
 import "./About.css"
-import WDimg from "../assets/imac.png"
-import GDimg from "../assets/graphic-design.png"
-import ADimg from "../assets/cell-phone.png"
+import BG from "../assets/White.jpg"
+
+import react from "../assets/react.png"
+import nodejs from "../assets/nodejs.png"
+import mongodb from "../assets/mongodb.png"
+import javascript from "../assets/Javascript.png"
+import figma from "../assets/figma.png"
+import illustrator from "../assets/illustrator.png"
 
 const About = () => {
     return (
-
-        <div id="Skills">
-            <div className="skills-heading">
-                My Services
-            </div>
-            <div className="skills-content">
-                <div class="skills-left">
-                    <div class="skills-card card-1">
-                        <div class="skills-card-img">
-                            <img src={WDimg} />
-                        </div>
-                        <div class="skills-card-content">
-                            <div class="skills-card-content-heading">
-                                Web Development
-                            </div>
-                            <div class="skills-card-content-text">
-                                Front End Developer
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-card card-2">
-                        <div class="skills-card-img">
-                            <img src={GDimg} />
-                        </div>
-                        <div class="skills-card-content">
-                            <div class="skills-card-content-heading">
-                                Graphic Designing
-                            </div>
-                            <div class="skills-card-content-text">
-                                Social Media Designer
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills-card card-3">
-                        <div class="skills-card-img">
-                            <img src={ADimg} />
-                        </div>
-                        <div class="skills-card-content">
-                            <div class="skills-card-content-heading">
-                                AI Development
-                            </div>
-                            <div class="skills-card-content-text">
-                                Agentic AI Developer
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-right">
-                    <div class="skills-right-heading">
+        <>
+            <div id="Skills">
+                <img src={BG} alt="" className='bg-image' />
+                <div className="skills-right">
+                    <div className="skills-right-heading">
                         <h1>What do I help?</h1>
                     </div>
-                    <div class="skills-right-text">
-                        I’m a web developer and designer passionate about creating visually engaging and highly functional digital experiences.  <br />
+                    <div className="skills-right-text">
+                        I'm a web developer and designer passionate about creating visually engaging and highly functional digital experiences.  <br />
                         I enjoy turning ideas into impactful digital products. I’m constantly learning and improving to stay aligned with the latest trends in both design and development.
                     </div>
-                    <div class="skills-right-figures">
-                        <div class="skills-right-figures-head">
-                            50+
+                    <div className="skills-right-figures">
+                        <div className="skills-right-figures-head">
+                            5+
                         </div>
-                        <div class="skills-right-figures-text">
-                            Projcts Completed
+                        <div className="skills-right-figures-text">
+                            Real World <br /> Projects Completed
                         </div>
                     </div>
                 </div>
+                <div className="skills-left">
+                    
+                    <div className="skills">
+                        <div className="skills-heading">
+                            Skills
+                        </div>
+                        <div className="skills-icons">
+                            <img src={react} alt="React" />
+                            <img src={nodejs} alt="Node.js" />
+                            <img src={mongodb} alt="MongoDB" />
+                            <img src={javascript} alt="JavaScript" />
+                            <img src={figma} alt="Figma" />
+                            <img src={illustrator} alt="Illustrator" />
+                        </div>
+                    </div>
+                    <div className="achievements">
+                        <div className="achievemnts-heading">
+                            Achievements
+                        </div>
+                        <ul className="achievements-list">
+                            <li className="achievement-item">
+                                Meta Advanced React Certificate
+                            </li>
+                            <li className="achievement-item">
+                                Meta React Basics Certificate
+                            </li>
+                            <li className="achievement-item">
+                                Meta Javascript Certificate
+                            </li>
+                            <li className="achievement-item">
+                                2 month internship as a font-end developer
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
 
