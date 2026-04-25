@@ -13,7 +13,7 @@ import UIUXprojects from '../Components/Projects/UIUXprojects'
 import Js from "../assets/Javascript.png"
 import react from "../assets/react.png"
 import figma from "../assets/figma.png"
-import illustrator from "../assets/illustrator.png"
+import illustrator from "../assets/Illustrator.png"
 import html from "../assets/html.png"
 import css from "../assets/css.png"
 
