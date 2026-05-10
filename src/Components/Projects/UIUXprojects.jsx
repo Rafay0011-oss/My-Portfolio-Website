@@ -3,19 +3,22 @@ import BG from "../../assets/White.jpg"
 import HomeDecor1 from "../../assets/project-images/Home-Decor-UI/Home-Decor-Mockup.png"
 import HomeDecor2 from "../../assets/project-images/Home-Decor-UI/Home-Decor-Mockup2.png"
 import "./UIUXprojects.css"
+import useScrollAnimation from "../../hooks/useScrollAnimation"
 
 const UIUXprojects = () => {
+  const [projectRef, projectVisible] = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <div id='UI-UX-Projects'>
       <img src={BG} alt="UI/UX Design" className='bg-image' />
-      <div className="UI-UX-project-1">
-        <h2>Home Decor Items Website UI Design</h2>
-        <p>Designed a visually appealing and user-friendly website for a home decor items business, showcasing products with an intuitive layout and seamless navigation.</p>
-        <div className="UI-UX-project-1-mockups">
+      <div className="UI-UX-project-1" ref={projectRef}>
+        <h2 className={projectVisible ? 'animate-fadeInLeft' : 'animate-hidden'}>Home Decor Items Website UI Design</h2>
+        <p className={projectVisible ? 'animate-fadeInUp' : 'animate-hidden'} style={{ animationDelay: '0.15s' }}>Designed a visually appealing and user-friendly website for a home decor items business, showcasing products with an intuitive layout and seamless navigation.</p>
+        <div className={`UI-UX-project-1-mockups ${projectVisible ? 'animate-fadeInUp' : 'animate-hidden'}`} style={{ animationDelay: '0.3s' }}>
           <img src={HomeDecor1} alt="Home Decor UI Design" className='Mockup-img' />
           <img src={HomeDecor2} alt="Home Decor UI Design" className='Mockup-img' />
         </div>
-        <div className="UI-UX-project-1-details">
+        <div className={`UI-UX-project-1-details ${projectVisible ? 'animate-fadeInUp' : 'animate-hidden'}`} style={{ animationDelay: '0.5s' }}>
           <ul className='UI-UX-project-1-features'>
             <h3>Key Features</h3>
             <li>Clean and Modern Design: A visually appealing design that highlights the beauty of home decor items while maintaining a clean and modern aesthetic.</li>

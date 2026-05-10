@@ -1,8 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.css";
-import designer from "../assets/Designer.png";
-import developer from "../assets/Developer.png";
-import mobileHero from "../assets/mobileHero.png";
 import myimage from "../assets/myimage2.png";
 import linkedin from "../assets/linkedin2.png"
 import github from "../assets/github.png"
@@ -14,12 +11,18 @@ import JS from "../assets/Javascript.png"
 import BG from "../assets/Black.jpg"
 
 const Home = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div id="Hero-Section">
       <img src={BG} alt="Background" className="bg-image" />
       <div className="Hero-Content">
-        <div className="Hero-left">
+        <div className={`Hero-left ${loaded ? 'hero-animate' : 'animate-hidden'}`}>
           <h1 className="Hero-heading">Hi, <br /> I'm Abdur Rafay</h1>
           <p className="Hero-Subheading">I design and develop high-quality websites that perform fast, convert visitors into customers and grow your business.</p>
           <div className="Hero-left-CTA">
@@ -49,7 +52,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className="Hero-Right">
+        <div className={`Hero-Right ${loaded ? 'hero-img-animate' : 'animate-hidden'}`}>
           <div className="glow-effect"></div>
           <div className="react-icon">
             <img src={react} alt="" />
@@ -60,7 +63,7 @@ const Home = () => {
           <div className="Js-icon">
             <img src={JS} alt="" />
           </div>
-          <img src={myimage} alt="" />
+          <img src={myimage} alt="" className="my-img" />
         </div>
       </div>
     </div>

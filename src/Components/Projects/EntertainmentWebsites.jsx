@@ -3,20 +3,23 @@ import BG from "../../assets/White.jpg"
 import GammingMockup1 from "../../assets/project-images/Gamming-Community-Website/Mockup1.png"
 import GammingMockup2 from "../../assets/project-images/Gamming-Community-Website/Mockup2.png"
 import "./EntertainmentWebsites.css"
+import useScrollAnimation from "../../hooks/useScrollAnimation"
 
 
 const EntertainmentWebsites = () => {
+    const [projectRef, projectVisible] = useScrollAnimation({ threshold: 0.1 });
+
     return (
         <div id='Entertainment-Projects'>
             <img src={BG} alt="" className="bg-image" />
-            <div className="Entertainment-project-1">
-                <h1 className='project-1-heading'>Gaming Community Websites</h1>
-                <p className='project-1-description'>As a passionate gamer, I have always been fascinated by the vibrant and dynamic world of gaming communities. Over the years, I have had the opportunity to create several gaming community websites that serve as hubs for gamers to connect, share their experiences, and stay updated on the latest gaming news and trends.</p>
-                <div className="project-1-mockups">
+            <div className="Entertainment-project-1" ref={projectRef}>
+                <h1 className={`project-1-heading ${projectVisible ? 'animate-fadeInLeft' : 'animate-hidden'}`}>Gaming Community Websites</h1>
+                <p className={`project-1-description ${projectVisible ? 'animate-fadeInUp' : 'animate-hidden'}`} style={{ animationDelay: '0.15s' }}>As a passionate gamer, I have always been fascinated by the vibrant and dynamic world of gaming communities. Over the years, I have had the opportunity to create several gaming community websites that serve as hubs for gamers to connect, share their experiences, and stay updated on the latest gaming news and trends.</p>
+                <div className={`project-1-mockups ${projectVisible ? 'animate-fadeInUp' : 'animate-hidden'}`} style={{ animationDelay: '0.3s' }}>
                     <img src={GammingMockup1} alt="Gaming Community Website Mockup 1" className='mockup-1' />
                     <img src={GammingMockup2} alt="Gaming Community Website Mockup 2" className='mockup-2' />
                 </div>
-                <div className="game-project-1-details">
+                <div className={`game-project-1-details ${projectVisible ? 'animate-fadeInUp' : 'animate-hidden'}`} style={{ animationDelay: '0.5s' }}>
                     <ul className='game-project-1-features'>
                         <h2 className='game-project-1-title'>Key Features</h2>
                         <li>Community Forums: A dedicated space for gamers to discuss their favorite games, share tips and tricks, and connect with like-minded individuals.</li>

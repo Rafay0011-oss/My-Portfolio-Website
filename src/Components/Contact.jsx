@@ -3,11 +3,14 @@ import BG from "../assets/Black.jpg"
 import gmail from "../assets/email.png"
 import phone from "../assets/phone-call.png"
 import location from "../assets/pin.png"
+import useScrollAnimation from "../hooks/useScrollAnimation"
 
 import "./Contact.css"
 
 const Contact = () => {
   const [status, setStatus] = useState("");
+  const [leftRef, leftVisible] = useScrollAnimation({ threshold: 0.2 });
+  const [rightRef, rightVisible] = useScrollAnimation({ threshold: 0.2 });
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +37,10 @@ const Contact = () => {
       <div id='Contact'>
         <img src={BG} alt="" className='bg-image'/>
         <div className="Contact-content">
-          <div className="contact-left">
+          <div 
+            ref={leftRef}
+            className={`contact-left ${leftVisible ? 'animate-fadeInLeft' : 'animate-hidden'}`}
+          >
             <h5>GET IN TOUCH</h5>
             <div className="contactpage-heading">
               Lets build something <br />amazing together
@@ -74,7 +80,10 @@ const Contact = () => {
             
 
           </div>
-          <div className="contactpage-right">
+          <div 
+            ref={rightRef}
+            className={`contactpage-right ${rightVisible ? 'animate-fadeInRight' : 'animate-hidden'}`}
+          >
             <div className="contact-form">
               <form onSubmit={handleFormSubmit}>
                 <input type="hidden" name="subject" value="New Message from Portfolio"></input>

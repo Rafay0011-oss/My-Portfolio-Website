@@ -46,12 +46,22 @@
   cursor: pointer;
   display: flex;
   gap: 6px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.Hire-Btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(184, 226, 6, 0.3);
 }
 
 .Hire-Btn img {
   width: 15px;
   filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
 
+.Hire-Btn:hover img {
+  transform: translateY(-2px);
 }
 
 .contact-linkedin,
@@ -121,10 +131,29 @@ hr {
   border: 2px solid #2b2b2b;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.Linkedin:hover,
+.Github:hover,
+.Upwork:hover,
+.Instagram:hover {
+  transform: translateY(-5px) scale(1.1);
+  border-color: rgb(184, 226, 6);
+  box-shadow: 0 8px 25px rgba(184, 226, 6, 0.2);
+  background: rgba(184, 226, 6, 0.08);
 }
 
 .Social-Links img {
   width: 25px;
+  transition: transform 0.3s ease;
+}
+
+.Linkedin:hover img,
+.Github:hover img,
+.Upwork:hover img,
+.Instagram:hover img {
+  transform: scale(1.15);
 }
 
 @media (max-width: 1024px) {

@@ -6,17 +6,24 @@ import github from "../assets/github.png"
 import upwork from "../assets/upwork.png"
 import insta from "../assets/instagram.png"
 import BG from "../assets/White.jpg"
+import useScrollAnimation from "../hooks/useScrollAnimation"
 
 const Footer = () => {
+    const [contactRef, contactVisible] = useScrollAnimation({ threshold: 0.2 });
+    const [footerRef, footerVisible] = useScrollAnimation({ threshold: 0.3 });
+
     return (
         <section id="contact-and-footer">
             <img src={BG} alt="" className='bg-image'/>
-            <div id="contact">
-                <div className="contact-left">
-                    <div class="contact-heading">
+            <div 
+                id="contact"
+                ref={contactRef}
+            >
+                <div className={`contact-left ${contactVisible ? 'animate-fadeInLeft' : 'animate-hidden'}`}>
+                    <div className="contact-heading">
                         Abdur Rafay
                     </div>
-                    <div class="contact-text">
+                    <div className="contact-text">
                         I design beautifully simple things.<br />And I love what I do.
                     </div>
                     <p className="links-label">FIND ME ON</p>
@@ -35,33 +42,33 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div class="contact-right">
-                    <div class="Hire-Btn">
+                <div className={`contact-right ${contactVisible ? 'animate-fadeInRight' : 'animate-hidden'}`}>
+                    <div className="Hire-Btn">
                         <div>Hire me </div>
                         <img src={UA} alt="Up Arrow" />
                     </div>
 
-                    <div class="contact-accounts">
-                        <div class="contact-linkedin social">
-                            <div class="contact-link">
+                    <div className="contact-accounts">
+                        <div className="contact-linkedin social">
+                            <div className="contact-link">
                                 <a href="#Skills">About</a>
                             </div>
                         </div>
 
-                        <div class="contact-facebook social">
-                            <div class="contact-link">
+                        <div className="contact-facebook social">
+                            <div className="contact-link">
                                 <a href="#Services">Services</a>
                             </div>
                         </div>
 
-                        <div class="contact-instagram social">
-                            <div class="contact-link">
+                        <div className="contact-instagram social">
+                            <div className="contact-link">
                                 <a href="#projects">Projects</a>
                             </div>
                         </div>
 
-                        <div class="contact-x social">
-                            <div class="contact-link">
+                        <div className="contact-x social">
+                            <div className="contact-link">
                                 <a href="#Contact">Contact</a>
                             </div>
                         </div>
@@ -70,7 +77,11 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <div id="footer">
+            <div 
+                id="footer"
+                ref={footerRef}
+                className={footerVisible ? 'animate-fadeInUp' : 'animate-hidden'}
+            >
                 <div className="footer-left">
                     &copy; 2026 \\ YourWebsiteName. All rights reserved.
                 </div>

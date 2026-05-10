@@ -9,6 +9,7 @@ nav {
   height: 60px;
   padding: 0 40px;
   position: relative;
+  animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .bg-image {
@@ -90,7 +91,6 @@ nav ul li a:hover::after {
   border-radius: 3px;
   transition: all 0.3s ease;
   margin: 0;
-
 }
 
 @media (max-width: 992px) {
@@ -108,27 +108,21 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
   nav {
     justify-content: space-between;
-    /* Pushes Logo left, Hamburger right */
     flex-wrap: wrap;
-    /* Allows menu to drop below navbar */
     height: auto;
     padding: 15px 20px;
     gap: 0;
   }
 
-  /* Show the 3 lines */
   .hamburger {
     display: flex;
   }
 
-  /* Hide the links and button by default on mobile */
   .mid {
     display: none;
     width: 100%;
-    /* Make them take full width when shown */
   }
 
-  /* SHOW the links and button ONLY when 'open' class is active */
   nav.open .mid {
     display: flex;
     justify-content: center;
@@ -140,7 +134,6 @@ nav ul li a:hover::after {
 
   nav ul {
     flex-direction: column;
-    /* Stack the links vertically */
     align-items: center;
     gap: 20px;
     padding: 0;

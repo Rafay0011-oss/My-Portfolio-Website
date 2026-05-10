@@ -46,6 +46,11 @@
   max-width: 500px;
   height: auto;
   border-radius: 8px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.Mockup-img:hover {
+  transform: scale(1.03);
 }
 
 .UI-UX-project-1-details {
@@ -81,13 +86,19 @@
   background-color: rgb(184, 226, 6);
   color: black;
   font-weight: 600;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(184, 226, 6, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
 }
 
 @media (max-width: 992px) {

@@ -4,29 +4,42 @@ import BG from "../assets/Black.jpg"
 import WDimg from "../assets/imac.png"
 import GDimg from "../assets/graphic-design.png"
 import ADimg from "../assets/cell-phone.png"
+import useScrollAnimation from "../hooks/useScrollAnimation"
 
 const Services = () => {
+  const [headingRef, headingVisible] = useScrollAnimation({ threshold: 0.3 });
+  const [card1Ref, card1Visible] = useScrollAnimation({ threshold: 0.2 });
+  const [card2Ref, card2Visible] = useScrollAnimation({ threshold: 0.2 });
+  const [card3Ref, card3Visible] = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section id="Services">
       <img src={BG} alt="BG" className='bg-image' />
-      <div class="Services-heading">
+      <div 
+        ref={headingRef}
+        className={`Services-heading ${headingVisible ? 'animate-fadeInDown' : 'animate-hidden'}`}
+      >
         My Services
       </div>
-      <div className="services-text">
+      <div className={`services-text ${headingVisible ? 'animate-fadeInUp' : 'animate-hidden'}`} style={{ animationDelay: '0.2s' }}>
         What I build
       </div>
       <div className="Services-cards">
-        <div class="Services-card card-1">
+        <div 
+          ref={card1Ref}
+          className={`Services-card card-1 ${card1Visible ? 'animate-fadeInUp' : 'animate-hidden'}`}
+          style={{ animationDelay: '0.1s' }}
+        >
           <div className="card-title">
-            <div class="Services-card-content-heading">
+            <div className="Services-card-content-heading">
               Business Websites
             </div>
-            <div class="Services-card-img">
+            <div className="Services-card-img">
               <img src={WDimg} />
             </div>
           </div>
 
-          <div class="Services-card-content">
+          <div className="Services-card-content">
             - Modern, brand-focused Website. <br />
             - Optimized for high performance and fast load speeds. <br />
             - SEO-ready architecture to drive organic traffic. <br />
@@ -34,17 +47,21 @@ const Services = () => {
             - Strategic lead-generation forms and clear call-to-action sections.
           </div>
         </div>
-        <div class="Services-card card-2">
+        <div 
+          ref={card2Ref}
+          className={`Services-card card-2 ${card2Visible ? 'animate-fadeInUp' : 'animate-hidden'}`}
+          style={{ animationDelay: '0.25s' }}
+        >
           <div className="card-title">
-            <div class="Services-card-content-heading">
+            <div className="Services-card-content-heading">
               Portfolio Websites
             </div>
-            <div class="Services-card-img">
+            <div className="Services-card-img">
               <img src={GDimg} />
             </div>
           </div>
 
-          <div class="Services-card-content">
+          <div className="Services-card-content">
             - Seamless integration for resumes and professional contact links. <br />
             - Clean, aesthetic layouts tailored to your creative work. <br />
             - High-impact design to capture recruiter and client attention. <br />
@@ -52,17 +69,21 @@ const Services = () => {
             - Custom-coded, unique interactive elements and animations.
           </div>
         </div>
-        <div class="Services-card card-3">
+        <div 
+          ref={card3Ref}
+          className={`Services-card card-3 ${card3Visible ? 'animate-fadeInUp' : 'animate-hidden'}`}
+          style={{ animationDelay: '0.4s' }}
+        >
           <div className="card-title">
-            <div class="Services-card-content-heading">
+            <div className="Services-card-content-heading">
               Ecommerce Websites
             </div>
-            <div class="Services-card-img">
+            <div className="Services-card-img">
               <img src={ADimg} />
             </div>
           </div>
 
-          <div class="Services-card-content">
+          <div className="Services-card-content">
             - Mobile-first design to ensure a smooth on-the-go shopping experience. <br />  
             - Organized, high-performance product grids for better browsing. <br />
             - Secure and reliable payment gateway integration. <br /> 
