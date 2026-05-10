@@ -50,6 +50,7 @@ const Home = () => {
           </div>
         </div>
         <div className="Hero-Right">
+          <div className="glow-effect"></div>
           <div className="react-icon">
             <img src={react} alt="" />
           </div>
